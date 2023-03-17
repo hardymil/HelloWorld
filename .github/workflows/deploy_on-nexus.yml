@@ -19,7 +19,7 @@ jobs:
       with:
         repo: 'hardymil/HelloWorld'
         version: 'tags/1.0'
-        file: 'Talend_Change_Data_Capture.7.16.1.zip'
+        file: 'Talend_Change_Data_Capture.7.16.0.zip'
         token: ${{ secrets.GITHUB_TOKEN }}
     - name: Build with Maven
       run: mvn package --file pom.xml
@@ -27,7 +27,7 @@ jobs:
       uses: sonatype-nexus-community/nexus-repo-github-action@master
       with:
         serverUrl: https://artifacts-zl.talend.com/nexus/content/repositories/releases
-        username: hmilalu
+        username: hmilal
         password: ${{ secrets.NEXUS_PASSWORD }}
         format: maven2
         repository: talend_nexus_deployment
