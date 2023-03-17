@@ -22,12 +22,12 @@ jobs:
         file: 'Talend_Change_Data_Capture.7.16.0.zip'
         token: ${{ secrets.GITHUB_TOKEN }}
     - name: Build with Maven
-      run: mvn package --file pom.xml
+      run: mvn deploy pom.xml
     - name: Nexus Repo Publish
       uses: sonatype-nexus-community/nexus-repo-github-action@master
       with:
         serverUrl: https://artifacts-zl.talend.com/nexus/content/repositories/releases
-        username: hmilal
+        username: hmilalu
         password: ${{ secrets.NEXUS_PASSWORD }}
         format: maven2
         repository: talend_nexus_deployment
