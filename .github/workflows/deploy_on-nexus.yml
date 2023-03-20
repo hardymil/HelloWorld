@@ -31,4 +31,4 @@ jobs:
         repository: talend_nexus_deployment
         coordinates: groupId=org.talend.changedatacapture artifactId=Talend_Change_Data_Capture_test_github_action version=1.0.0
         assets: extension=pom
-        filename: ./Talend_Change_Data_Capture.7.16.0.zip
+        filename: ./Talend_Change_Data_Capture.7.16.0.zip 
