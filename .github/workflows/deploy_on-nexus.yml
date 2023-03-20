@@ -25,7 +25,7 @@ jobs:
       uses: sonatype-nexus-community/nexus-repo-github-action@master
       with:
         serverUrl: https://artifacts-zl.talend.com/nexus/content/repositories/releases
-        username: hmilalu
+        username: ${{ secret.NEXUS_ID }}
         password: ${{ secrets.NEXUS_PASSWORD }}
         format: maven2
         repository: talend_nexus_deployment
