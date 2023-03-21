@@ -26,11 +26,8 @@
 
 	<distributionManagement>
    		<repository>
-      		<id>talend_nexus_deployment</id>
-      		<url>https://artifacts-zl.talend.com/nexus/content/repositories/releases</url>
-			<snapshots>
-				<enabled>true</enabled>
-			</snapshots>
+	      		<id>github</id>
+      			<url>https://artifacts-zl.talend.com/nexus/content/repositories/releases</url>
    		</repository>
 	</distributionManagement>
 	<build>
