@@ -8,12 +8,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v1
-    - name: Set up JDK 1.8
-      uses: actions/setup-java@v1
-      with:
-        java-version: 1.8
-    
     - name: Download last release asset
       uses: dsaltares/fetch-gh-release-asset@master
       with:
@@ -21,16 +15,13 @@ jobs:
         version: 'tags/1.0'
         file: 'Talend_Change_Data_Capture.7.16.0.zip'
         token: ${{ secrets.GITHUB_TOKEN }}
-    - name: Build with Maven
-      run: mvn package --file pom.xml
-    - name: Nexus Repo Publish
-      uses: sonatype-nexus-community/nexus-repo-github-action@master
+
+    - uses: actions/checkout@v2
+    - uses: actions/setup-java@v1
       with:
-        serverUrl: https://artifacts-zl.talend.com/nexus/content/repositories/releases
-        username: ${{ secrets.NEXUS_ID }}
-        password: ${{ secrets.NEXUS_PASSWORD }}
-        format: maven2
-        repository: talend_nexus_deployment
-        coordinates: groupId=org.talend.changedatacapture artifactId=Talend_Change_Data_Capture_test_github_action version=1.0.0
-        assets: extension=zip
-        filename: ./Talend_Change_Data_Capture.7.16.0.zip 
+        java-version: 1.8
+
+    - name: Publish to GitHub Packages
+      env:
+        GITHUB_TOKEN: ${{ github.token }}
+      run: mvn deploy
