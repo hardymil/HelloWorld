@@ -42,7 +42,7 @@
 							<goal>deploy-file</goal>
 						</goals>
 						<configuration>
-							<file>Talend_Change_Data_Capture.${project.version}.zip</file>
+							<file>./Talend_Change_Data_Capture.${project.version}.zip</file>
 							<repositoryId>${project.distributionManagement.repository.id}</repositoryId>
 							<url>${project.distributionManagement.repository.url}</url>
 							<groupId>${project.groupId}</groupId>
