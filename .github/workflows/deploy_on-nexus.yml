@@ -14,6 +14,7 @@ jobs:
         repo: 'hardymil/HelloWorld'
         version: 'tags/1.0'
         file: 'Talend_Change_Data_Capture.7.16.0.zip'
+        target: 'HelloWorld/Talend_Change_Data_Capture.7.16.0.zip'
         token: ${{ secrets.GITHUB_TOKEN }}
 
     - uses: actions/checkout@v2
