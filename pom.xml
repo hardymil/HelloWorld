@@ -26,11 +26,8 @@
 
 	<distributionManagement>
    		<repository>
-      		<id>talend_nexus_deployment</id>
-      		<url>https://artifacts-zl.talend.com/nexus/content/repositories/releases</url>
-			<snapshots>
-				<enabled>true</enabled>
-			</snapshots>
+	      		<id>talend_nexus_deployment</id>
+      			<url>https://artifacts-zl.talend.com/nexus/content/repositories/releases</url>
    		</repository>
 	</distributionManagement>
 	<build>
@@ -45,7 +42,7 @@
 							<goal>deploy-file</goal>
 						</goals>
 						<configuration>
-							<file>Talend_Change_Data_Capture.${project.version}.zip</file>
+							<file>./Talend_Change_Data_Capture.${project.version}.zip</file>
 							<repositoryId>${project.distributionManagement.repository.id}</repositoryId>
 							<url>${project.distributionManagement.repository.url}</url>
 							<groupId>${project.groupId}</groupId>
