@@ -13,7 +13,7 @@
     <groupId>org.talend.changedatacapture</groupId>
     <artifactId>Talend_Change_Data_Capture_test_github_action</artifactId>
     <version>7.16.0</version>
-    <packaging>pom</packaging>
+    <packaging>zip</packaging>
 
     <organization>
         <name>Talend Inc.</name>
