@@ -27,4 +27,4 @@ jobs:
       run: |
           mkdir -p ~/.m2
           echo "<settings><servers><server><id>talend_nexus_deployment</id><username>${{ secrets.NEXUS_ID }}</username><password>${{ secrets.NEXUS_PASSWORD }}</password></server></servers></settings>" > ~/.m2/settings.xml
-          mvn deploy:deploy-file -DpomFile=pom.xml -Dfile=./Talend_Change_Data_Capture.7.16.0.zip -DrepositoryId=talend_nexus_deployment -Durl=https://artifacts-zl.talend.com/nexus/content/repositories/thirdparty-releases/ 
+          mvn deploy:deploy-file -DpomFile=pom.xml -Dfile=./Talend_Change_Data_Capture.7.16.0.zip -DrepositoryId=talend_nexus_deployment -Durl=https://artifacts-zl.talend.com/nexus/content/repositories/thirdparty-releases/ -Dtype=zip 
