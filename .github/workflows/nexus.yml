@@ -24,5 +24,5 @@ jobs:
         format: maven2
         repository: talend_nexus_deployment
         coordinates: groupId=org.talend.changedatacapture artifactId=Talend_Change_Data_Capture_releases version=1.0.0
-        assets: filename=Talend_Change_Data_Capture.7.16.0
-        filename: ./Talend_Change_Data_Capture.7.16.0
+        assets: filename=Talend_Change_Data_Capture.7.16.0.zip
+        filename: ./Talend_Change_Data_Capture.7.16.0.zip
